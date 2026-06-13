@@ -2,7 +2,9 @@
 
 I have a blank project.
 
-Use `presentation-feature-video-ads` to create a cinematic presentation video ad from the following idea:
+Use `presentation-feature-video-ads` to create a cinematic presentation video ad from the following idea.
+
+If no app exists yet, scaffold the smallest runnable React/Vite structure first and put the implementation there.
 
 - product: [describe the product]
 - audience: [who it is for]
@@ -11,4 +13,4 @@ Use `presentation-feature-video-ads` to create a cinematic presentation video ad
 - proof: [any measurable signals]
 - CTA: [what I want the viewer to do]
 
-Keep the result premium, content-sized, and faithful to the bundled PresentationFeature house style.
+Keep the result premium, content-sized, and faithful to the bundled PresentationFeature house style. Create the actual source files and tests, not just an outline.

@@ -7,6 +7,7 @@ These examples show how to use the skill in different starting conditions.
 - `empty-project.md` — start from nothing
 - `about-us.md` — transform an about page
 - `pricing.md` — transform a pricing or package page
+- `react-implementation.md` — the default current-app implementation prompt
 
 ## How to use them
 

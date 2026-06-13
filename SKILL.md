@@ -15,7 +15,9 @@ The skill is public and portable. It is designed to work from the bundled refere
 
 By default, this skill should produce a **code-ready implementation**, not just a concept outline.
 
-For React projects, the expected result is the actual presentation implementation in the target repo, typically including:
+A short prompt like `Use presentation-feature-video-ads to implement the AI 360 Feedback presentation` is shorthand for a full implementation request in the **current app workspace**.
+
+For React projects, the expected result is the actual presentation implementation in the current app workspace, typically including:
 
 - a presentation component
 - a route/page wrapper
@@ -23,7 +25,7 @@ For React projects, the expected result is the actual presentation implementatio
 - any small supporting components
 - tests that prove the story flow and controls work
 
-If the user explicitly asks for strategy-only or outline-only output, you may give a planning response. Otherwise, assume implementation mode.
+If the user explicitly asks for strategy-only or outline-only output, you may give a planning response. Otherwise, assume implementation mode and write the actual source files.
 
 ## Reference resolution order
 
@@ -49,6 +51,14 @@ For a React app, prefer the following target shape:
 - `__tests__` coverage for opener, transport controls, and story flow
 
 If the project already has a presentation shell, adapt to it. If the project is empty, scaffold the smallest working version that can run.
+
+## Workspace boundary
+
+Treat the bundled skill package as read-only reference material.
+
+When the user asks to implement a presentation, write into the current app workspace, not into `examples/`, `reference/`, or `.agents/skills/`.
+
+Only edit the skill package itself when the user explicitly asks to rewrite the skill.
 
 ## Non-negotiable contract
 

@@ -6,6 +6,7 @@
 - Added one-command install guidance via `npx skills add Rommadon/presentation-video-ads-skill`.
 - Added agent-specific usage docs for Codex, Claude Code, and OpenCode.
 - Added top-level `CLAUDE.md`, `CONTRIBUTING.md`, `examples/`, and `docs/`.
+- Clarified that the bare implementation prompt expands to current-app source files, tests, and scaffold-first fallback when no app exists.
 
 ## 1.0.0
 

@@ -10,6 +10,18 @@ npx skills add Rommadon/presentation-video-ads-skill
 
 No scaffold suffix is needed. The skill generates the code by default.
 
+## Default prompt
+
+Use `presentation-feature-video-ads` to implement the AI 360 Feedback presentation.
+
+That short prompt already means:
+
+- create the actual source files in the current app workspace
+- add tests for the presentation flow
+- if no app exists, scaffold the minimal React/Vite structure first
+- do not stop at an outline or an example brief
+- do not edit `.agents/skills/` or `examples/` unless the user explicitly asked to rewrite the skill
+
 ## Use with Codex
 
 After installing, ask Codex to use the `presentation-feature-video-ads` skill on your source material **and to implement the result as code**.
@@ -17,7 +29,7 @@ After installing, ask Codex to use the `presentation-feature-video-ads` skill on
 Example:
 
 ```text
-Use presentation-feature-video-ads to turn my /about page into an About Us Presentation.
+Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
 ```
 
 ## Use with Claude Code
@@ -27,7 +39,7 @@ Install the skill, then ask Claude Code to transform the source content into a c
 Example:
 
 ```text
-Use presentation-feature-video-ads on this pricing page and keep the house style consistent.
+Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
 ```
 
 ## Use with OpenCode
@@ -37,7 +49,7 @@ Install the skill, then point OpenCode at the source content and ask for a prese
 Example:
 
 ```text
-Use presentation-feature-video-ads to turn this empty project brief into a presentation video ad implementation.
+Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
 ```
 
 ## Best first prompt

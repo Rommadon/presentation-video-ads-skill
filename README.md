@@ -10,6 +10,12 @@ Built for Codex, Claude Code, OpenCode, Cursor, and any agent that reads skill f
 
 Need help choosing the right starting point? Read `docs/USAGE.md`.
 
+## Default behavior
+
+A short prompt like `Use presentation-feature-video-ads to implement the AI 360 Feedback presentation` is enough.
+
+That means the skill should create the actual source files in the current app workspace, add tests, and scaffold the smallest runnable React/Vite structure first if no app exists.
+
 ## Why it exists
 
 - Code-first by default
