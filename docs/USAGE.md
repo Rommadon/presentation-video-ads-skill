@@ -1,67 +1,41 @@
 # Usage
 
-This skill is designed to be easy to add and easy to use.
-
 ## Install
 
 ```bash
 npx skills add Rommadon/presentation-video-ads-skill
 ```
 
-No scaffold suffix is needed. The skill generates the code by default.
-
 ## Default prompt
 
-Use `presentation-feature-video-ads` to implement the AI 360 Feedback presentation.
+```text
+Use presentation-feature-video-ads to implement the Apple Inc about us presentation.
+```
 
-That short prompt already means:
+That short prompt already implies:
 
 - create the actual source files in the current app workspace
-- add tests for the presentation flow
-- if no app exists, scaffold the minimal React/Vite structure first
-- prefer more, shorter scenes when the content has multiple claims
-- make each scene own one focus and one visible UI state
-- keep the transport area minimal and music-player-like
-- do not stop at an outline or an example brief
-- do not edit `.agents/skills/` or `examples/` unless the user explicitly asked to rewrite the skill
+- scaffold the smallest runnable React/Vite structure first if no app exists
+- split rich content into more, shorter scenes
+- keep one focus and one visible UI state per scene
+- use modern product mockups and refined motion
+- keep the transport chrome minimal and player-like
 
-## Use with Codex
+## Progressive-disclosure flow
 
-After installing, ask Codex to use the `presentation-feature-video-ads` skill on your source material **and to implement the result as code**.
+1. Read `SKILL.md`
+2. Read `reference/STYLE_INDEX.md`
+3. Read `templates/index.json`
+4. Shortlist candidates from metadata only
+5. Read only shortlisted `preview.md` files
+6. Read one selected `design.md`
+7. Generate the implementation
 
-Example:
+## User-facing starting prompts
 
-```text
-Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
-```
-
-## Use with Claude Code
-
-Install the skill, then ask Claude Code to transform the source content into a cinematic presentation **as runnable code**.
-
-Example:
-
-```text
-Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
-```
-
-## Use with OpenCode
-
-Install the skill, then point OpenCode at the source content and ask for a presentation-style output **in code**.
-
-Example:
-
-```text
-Use presentation-feature-video-ads to implement the AI 360 Feedback presentation.
-```
-
-## Best first prompt
-
-If you are starting from nothing, use `examples/empty-project.md`.
-
-If you already have a page, use the example that matches it:
-
+- `examples/empty-project.md`
 - `examples/about-us.md`
 - `examples/pricing.md`
+- `examples/react-implementation.md`
 
-If you want the React/code version explicitly, use `examples/react-implementation.md`.
+Use these only when you need a starting prompt. They are not the architecture.

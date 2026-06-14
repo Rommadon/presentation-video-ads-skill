@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "pack_name": "Presentation Feature Templates",
+  "selection_rule": "Read this compact file first. Shortlist up to 3 templates from metadata only. Read only those preview docs. Read exactly one design doc after selection.",
+  "template_count": 6,
+  "templates": [
+    {
+      "id": "presentation-feature-core",
+      "title": "Presentation Feature Core",
+      "status": "ready",
+      "is_default": true,
+      "use_when": "You want the strongest default video-ad system with premium product simulations and modern app surfaces.",
+      "avoid_when": "You need a quieter or more print-led editorial aesthetic.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/presentation-feature-core/preview.md",
+      "design_doc": "templates/presentation-feature-core/design.md",
+      "reference_examples": [
+        "templates/presentation-feature-core/examples/about-us-brief.md",
+        "templates/presentation-feature-core/examples/pricing-brief.md"
+      ],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    },
+    {
+      "id": "soft-editorial",
+      "title": "Soft Editorial",
+      "status": "ready",
+      "is_default": false,
+      "use_when": "You want a warm editorial layer on top of the current base style, with calmer surfaces and soft paper contrast.",
+      "avoid_when": "You need darker, more forceful commercial contrast.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/soft-editorial/preview.md",
+      "design_doc": "templates/soft-editorial/design.md",
+      "reference_examples": [],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    },
+    {
+      "id": "emerald-editorial",
+      "title": "Emerald Editorial",
+      "status": "ready",
+      "is_default": false,
+      "use_when": "You want magazine-cover enterprise confidence with richer masthead rhythm and premium contrast.",
+      "avoid_when": "You need casual, playful, or low-formality motion.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/emerald-editorial/preview.md",
+      "design_doc": "templates/emerald-editorial/design.md",
+      "reference_examples": [],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    },
+    {
+      "id": "vellum",
+      "title": "Vellum",
+      "status": "ready",
+      "is_default": false,
+      "use_when": "You want a dark, quiet, scholarly editorial variant while preserving the same cinematic structure.",
+      "avoid_when": "You need brighter pop color or louder CTA energy.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/vellum/preview.md",
+      "design_doc": "templates/vellum/design.md",
+      "reference_examples": [],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    },
+    {
+      "id": "capsule",
+      "title": "Capsule",
+      "status": "ready",
+      "is_default": false,
+      "use_when": "You want modular rounded cards, friendlier commercial energy, and clean multi-card UI states.",
+      "avoid_when": "You need austere or highly institutional formality.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/capsule/preview.md",
+      "design_doc": "templates/capsule/design.md",
+      "reference_examples": [],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    },
+    {
+      "id": "cobalt-grid",
+      "title": "Cobalt Grid",
+      "status": "ready",
+      "is_default": false,
+      "use_when": "You want sharp design-research typography, high structure, and an analytical editorial layer.",
+      "avoid_when": "You need soft warmth or playful expressiveness.",
+      "style_authority": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ],
+      "preview_doc": "templates/cobalt-grid/preview.md",
+      "design_doc": "templates/cobalt-grid/design.md",
+      "reference_examples": [],
+      "generation_refs": [
+        "reference/STYLE_GUIDE.md",
+        "reference/scene-grammar.json"
+      ]
+    }
+  ]
+}

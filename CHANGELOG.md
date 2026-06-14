@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0
+
+- Rebuilt the package around progressive disclosure.
+- Turned `SKILL.md` into a workflow map instead of a giant inline contract.
+- Added `reference/STYLE_INDEX.md` and `templates/index.json` for lightweight style selection.
+- Added six on-demand template packs with preview/design docs.
+- Removed MCP from the public package surface.
+- Added an architecture test to lock the markdown-only repo shape.
+
 ## 1.3.1
 
 - Replaced desktop-window-inspired mockup guidance with modern product mockups and a cleaner aesthetic direction.
@@ -23,5 +32,4 @@
 
 - Initial public release of `presentation-feature-video-ads`.
 - Bundled a self-contained reference pack.
-- Added an optional MCP adapter.
 - Added universal usage examples for empty and existing projects.

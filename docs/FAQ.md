@@ -1,25 +1,22 @@
 # FAQ
 
-## Do I need the original source?
+## Do I need the original source repo?
 
-No. The bundled reference pack is the authority.
+No. The bundled reference pack and template docs are the authority.
 
 ## Can I use this in an empty project?
 
-Yes. Start with `examples/empty-project.md`.
-
-## Do I need MCP?
-
-No. MCP is optional. The markdown skill and bundled reference pack are enough.
+Yes. Start with `examples/empty-project.md` or a direct short prompt. The skill should scaffold first when needed.
 
 ## What files should I read first?
 
 1. `README.md`
 2. `SKILL.md`
-3. `reference/STYLE_GUIDE.md`
-4. `reference/scene-grammar.json`
-5. one of the files in `examples/`
+3. `reference/STYLE_INDEX.md`
+4. `templates/index.json`
+5. shortlisted template `preview.md` files
+6. one selected `design.md`
 
-## What if I want to use it with my own project?
+## Do I need to read every template?
 
-Paste your project context into one of the examples and keep the story content, not the house style.
+No. Read only enough metadata to shortlist, then one `design.md` after selection.

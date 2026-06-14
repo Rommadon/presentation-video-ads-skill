@@ -8,78 +8,44 @@ npx skills add Rommadon/presentation-video-ads-skill
 
 Built for Codex, Claude Code, OpenCode, Cursor, and any agent that reads skill folders.
 
-Need help choosing the right starting point? Read `docs/USAGE.md`.
+## What changed in this architecture
+
+This repo now uses **progressive disclosure**:
+
+- `SKILL.md` is the workflow map
+- `reference/STYLE_INDEX.md` is the template chooser
+- `templates/index.json` is the compact metadata layer
+- `templates/*/preview.md` are tiny style cards
+- `templates/*/design.md` are loaded only after selection
+
+There is **no MCP layer**. This package is markdown-first and self-contained.
 
 ## Default behavior
 
-A short prompt like `Use presentation-feature-video-ads to implement the AI 360 Feedback presentation` is enough.
+A short prompt like `Use presentation-feature-video-ads to implement the Apple Inc about us presentation` is enough.
 
-That means the skill should create the actual source files in the current app workspace, add tests, and scaffold the smallest runnable React/Vite structure first if no app exists.
+That means the skill should create real source files in the current app workspace, split rich content into more focused scenes, use modern product mockups, and keep the transport chrome minimal and player-like.
 
-The resulting deck should favor more, shorter scenes with one focus per scene, visible UI simulations, modern product mockups, and a minimal music-player-style transport bar.
+## Starter templates
 
-Motion should feel crisp, tactile, and refined — closer to `emil-design-eng` than a generic presentation animation style.
+- `presentation-feature-core` — the current best default
+- `soft-editorial`
+- `emerald-editorial`
+- `vellum`
+- `capsule`
+- `cobalt-grid`
 
-## Why it exists
-
-- Code-first by default
-- Empty-project friendly
-- PresentationFeature-style output
-- More scenes, less text, more UI
-- No extra suffix prompt required
-
-## What you get
-
-- `SKILL.md` — reusable skill contract
-- `manifest.json` — package metadata and install contract
-- `reference/` — style authority
-- `examples/` — starting points for empty and existing projects
-- `docs/` — usage, portability, FAQ, and output contract
-- `mcp/` — optional adapter for structured clients
+Each template stays inside the same core concept: premium video presentation style, player-first shell, UI-heavy storytelling, and clean product surfaces.
 
 ## Start here
 
-### If your agent reads markdown skills
+1. Read `SKILL.md`
+2. Read `reference/STYLE_INDEX.md`
+3. Read `templates/index.json`
+4. Read only shortlisted `preview.md` files
+5. Read one selected `design.md`
 
-1. Open `SKILL.md`.
-2. Read `reference/STYLE_GUIDE.md`.
-3. Read `reference/scene-grammar.json`.
-4. Try one of the examples in `examples/`.
-
-### If your agent supports MCP
-
-1. `cd mcp`
-2. `npm install`
-3. `npm run dev`
-4. Read the same reference files through the MCP resources.
-
-### If you use Codex, Claude Code, or OpenCode
-
-1. Open the agent and point it at your source content.
-2. Ask it to create a presentation using the `presentation-feature-video-ads` skill.
-3. Start with `examples/empty-project.md` if you do not already have a page or brief.
-
-### If you are starting from an empty project
-
-Use `examples/empty-project.md` as your first prompt. It is written to work without any existing app code.
-
-## Portable contract
-
-The package follows one simple rule:
-
-> keep the PresentationFeature house style; change only the storyline and source content
-
-That means the repo keeps the cinematic player shell, premium motion language, polished simulation cards, and strong CTA ending while adapting to the input you give it.
-
-## Output mode
-
-This skill is implementation-first.
-
-When you use it in an app, expect it to create or update real code files, not just return a text summary.
-
-For React apps, the target is usually a presentation component, a page wrapper, styles, and tests.
-
-Read `docs/OUTPUT-CONTRACT.md` for the exact contract.
+If you just want starter prompts, use `examples/`.
 
 ## Repository structure
 
@@ -92,42 +58,16 @@ presentation-feature-video-ads/
 ├── LICENSE
 ├── SKILL.md
 ├── manifest.json
-├── examples/
 ├── docs/
+├── examples/
 ├── reference/
-└── mcp/
+└── templates/
 ```
 
-## Example use cases
+## Why this pack is different
 
-- `/about` page → About Us Presentation
-- pricing page → pricing deck
-- customer page → design-partner presentation
-- raw notes → founder narrative deck
-- empty project → first-run presentation brief
-
-## What this is not
-
-- a dashboard kit
-- a documentation template
-- a generic slide deck engine
-- a runtime/editor/framework
-- a repo that depends on private source paths
-
-## Maintenance
-
-When you update the skill, keep these in sync:
-
-- `SKILL.md`
-- `reference/STYLE_GUIDE.md`
-- `reference/scene-grammar.json`
-- the example briefs
-
-If you change the public contract, bump the version in `manifest.json`.
-
-## For maintainers
-
-- Read `CLAUDE.md` for repo rules.
-- Read `CONTRIBUTING.md` before adding examples or changing the reference pack.
-- Read `PUBLISHING.md` when preparing a release.
-- Read `docs/USAGE.md` to see the exact prompts and install flow users should follow.
+- implementation-first
+- UI-first video-ad storytelling
+- shared base style with multiple on-demand templates
+- progressive disclosure instead of one giant contract
+- no private paths, no MCP, no external runtime dependency

@@ -1,21 +1,15 @@
 # Reference pack
 
-This folder is the portable style anchor for the public `presentation-feature-video-ads` package.
-
-Use it as the canonical style anchor for the public package.
-
-This reference pack now leans harder into multi-scene, UI-first presentations: more, shorter scenes; one focus per scene; modern product mockups; and a minimal music-player-like transport chrome.
+This folder holds the shared authority used by every template.
 
 ## Files
 
-- `STYLE_GUIDE.md` — distilled house-style contract
-- `scene-grammar.json` — structured storyboard rules
-- `examples/about-us-brief.md` — prompt pattern for an About Us Presentation
-- `examples/pricing-brief.md` — prompt pattern for a pricing / package presentation
+- `STYLE_INDEX.md` — lightweight template chooser
+- `STYLE_GUIDE.md` — shared house-style contract
+- `scene-grammar.json` — shared scene and pacing rules
 
 ## How to use
 
-1. Read `STYLE_GUIDE.md` to understand the visual and motion contract.
-2. Read `scene-grammar.json` to understand how to size the deck.
-3. Use the example briefs as prompt templates.
-4. If the package is used inside another project, keep this reference pack as the style authority.
+1. Read `STYLE_INDEX.md` first for template routing.
+2. Read `STYLE_GUIDE.md` and `scene-grammar.json` during generation.
+3. Read template-local docs from `templates/` only after shortlisting or selection.

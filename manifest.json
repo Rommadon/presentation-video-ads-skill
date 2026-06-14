@@ -1,41 +1,31 @@
 {
   "name": "presentation-feature-video-ads",
-  "version": "1.3.1",
-  "distribution": "public-hybrid",
+  "version": "1.4.0",
+  "distribution": "public-markdown",
   "package_type": "skill-pack",
   "primary_install_unit": "skills",
   "entrypoint": "SKILL.md",
   "reference_root": "reference/",
   "example_root": "examples/",
-  "docs_root": "docs/",
-  "mcp_root": "mcp/",
-  "reference_sources": {
-    "bundled_style_guide": "reference/STYLE_GUIDE.md",
-    "scene_grammar": "reference/scene-grammar.json",
-    "example_briefs": [
-      "reference/examples/about-us-brief.md",
-      "reference/examples/pricing-brief.md"
-    ]
-  },
+  "template_root": "templates/",
   "install_modes": [
     "markdown-skill",
-    "mcp-reference",
     "repo-copy"
   ],
   "install_command": "npx skills add Rommadon/presentation-video-ads-skill",
-  "optional_adapter": "mcp",
   "supported_clients": [
     "codex",
     "claude-code",
     "opencode",
     "cursor",
-    "mcp-aware-agents",
     "markdown-skill-runners"
   ],
   "authoritative_files": [
     "SKILL.md",
+    "reference/STYLE_INDEX.md",
     "reference/STYLE_GUIDE.md",
-    "reference/scene-grammar.json"
+    "reference/scene-grammar.json",
+    "templates/index.json"
   ],
-  "notes": "Self-contained public skill package with bundled style references, reusable examples, and an optional MCP adapter. Defaults to multi-scene, UI-first, modern product mockups, and music-player-minimal transport behavior with Emil-inspired motion sensibility."
+  "notes": "Progressive-disclosure public skill pack with shared video-presentation style authority, on-demand template docs, no MCP, and a default Presentation Feature Core template."
 }

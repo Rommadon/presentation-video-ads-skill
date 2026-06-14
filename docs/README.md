@@ -1,10 +1,10 @@
 # Docs index
 
-Use these docs when you want portability guidance, setup help, or a quick answer to common questions.
+Use these docs when you need help beyond the core workflow map.
 
 ## Files
 
-- `OUTPUT-CONTRACT.md` — what the skill should produce in a target project
-- `USAGE.md` — how to use the skill with Codex, Claude Code, and OpenCode
-- `PORTABILITY.md` — what the package needs and what it does not
-- `FAQ.md` — common questions for new users
+- `USAGE.md` — install flow and how to use the progressive-disclosure architecture
+- `OUTPUT-CONTRACT.md` — what the generated implementation should look like
+- `PORTABILITY.md` — what the package assumes and what it does not
+- `FAQ.md` — quick answers for first-time users

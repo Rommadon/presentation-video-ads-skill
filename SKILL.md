@@ -1,235 +1,90 @@
 ---
 name: presentation-feature-video-ads
-description: "Generate premium, multi-scene, UI-first video-ad presentations in the PresentationFeature house style using the bundled reference pack and optional MCP-style reference source."
+description: "Generate premium, multi-scene, UI-first video-ad presentations from a progressive-disclosure skill pack with on-demand template loading."
 ---
 
 # presentation-feature-video-ads
 
-## Purpose
+Turn product briefs, pages, screenshots, notes, or an empty project into a cinematic presentation implementation that feels like `PresentationFeature`.
 
-Turn product briefs, page content, screenshots, folders, notes, or an empty project into a cinematic presentation that feels like `PresentationFeature` — same premium ad-like pacing, same player framing, same polished product simulations, same deliberate motion language, same closing CTA energy.
+## Core rules
 
-The skill is public and portable. It is designed to work from the bundled reference pack alone, so it can be used on any project without upstream context.
+1. **Implementation-first** — default to real source files in the current app workspace.
+2. **Progressive disclosure** — load only the files needed for the current phase.
+3. **UI-first storytelling** — prefer product surfaces, state changes, counters, timelines, chips, and staged simulations over dense text.
+4. **One focus per scene** — split rich content into more, shorter beats.
+5. **Shared house style** — keep the player-first, premium, simulation-driven system while allowing template-level variation.
 
-## Default output mode
+## File loading map
 
-By default, this skill should produce a **code-ready implementation**, not just a concept outline.
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `SKILL.md` | Workflow map and rules | Always |
+| `reference/STYLE_INDEX.md` | Lightweight template chooser | Template selection |
+| `templates/index.json` | Compact template metadata | Template selection |
+| `templates/*/preview.md` | Shortlisted preview cards | After shortlisting |
+| `reference/STYLE_GUIDE.md` | Shared house-style authority | Generation |
+| `reference/scene-grammar.json` | Shared scene/pacing contract | Generation |
+| `templates/*/design.md` | Selected template design recipe | After user selection |
+| `templates/presentation-feature-core/examples/*` | Base-template example briefs | When the selected template is the default and the use case matches |
+| `examples/*.md` | User-facing starting prompts | Only when the user needs a starting prompt |
 
-A short prompt like `Use presentation-feature-video-ads to implement the AI 360 Feedback presentation` is shorthand for a full implementation request in the **current app workspace**.
+Do not bulk-read every template `design.md`.
 
-For React projects, the expected result is the actual presentation implementation in the current app workspace, typically including:
+## Workflow
+
+### Phase 1 — detect the starting point
+
+Classify the job:
+
+- current app implementation
+- empty-project scaffold
+- page-to-presentation adaptation
+- brief/notes-to-presentation adaptation
+
+If there is no app shell, scaffold the smallest runnable React/Vite structure first.
+
+### Phase 2 — choose a template
+
+1. Read `reference/STYLE_INDEX.md`.
+2. Read `templates/index.json`.
+3. Shortlist up to 3 templates from metadata only.
+4. Read only those templates' `preview.md` files.
+5. If the user chooses one, read exactly that template's `design.md`.
+6. If the user does not choose, default to `presentation-feature-core`.
+
+### Phase 3 — generate
+
+Read:
+
+- `reference/STYLE_GUIDE.md`
+- `reference/scene-grammar.json`
+- the selected template's `design.md`
+- the selected template's example briefs only if they help the current use case
+
+Then implement the presentation in the current app workspace.
+
+## Implementation contract
+
+For React projects, the expected result usually includes:
 
 - a presentation component
 - a route/page wrapper
 - styling for the presentation shell
 - any small supporting components
-- tests that prove the story flow and controls work
+- tests for controls and scene flow
 
-If the user explicitly asks for strategy-only or outline-only output, you may give a planning response. Otherwise, assume implementation mode and write the actual source files.
+Write into the current app workspace, not into `examples/`, `reference/`, or `templates/`.
 
-For rich briefs, prefer more, shorter scenes instead of packing several claims into one presentation beat.
+Only edit the skill package itself when the user explicitly asks to improve or rewrite the skill.
 
-Each scene should own one focus, one visible UI state, and one emotional turn.
+## Shared quality bar
 
-The transport controls should be minimal and music-player-like, closer to Spotify or Apple Music than a generic presentation toolbar.
+- more, shorter scenes when the content is rich
+- one focus and one visible UI state per scene
+- modern product mockups, not literal desktop chrome
+- crisp, tactile, refined motion
+- minimal music-player-like transport chrome
+- premium CTA close
 
-## Reference resolution order
-
-Use the bundled style sources in this order:
-
-1. `reference/STYLE_GUIDE.md`
-2. `reference/scene-grammar.json`
-3. `reference/examples/about-us-brief.md`
-4. `reference/examples/pricing-brief.md`
-5. optional MCP reference adapter if the client supports it
-
-The bundled reference pack is the authority. The MCP adapter should expose the same files, not replace them.
-
-## Implementation contract
-
-When using this skill in a project, the assistant should aim to write the code needed to make the presentation real in that project.
-
-For a React app, prefer the following target shape:
-
-- the project’s existing presentation component folder, or a new equivalent if the project is empty
-- `src/pages/...` route/page wrapper
-- `styles.css` or the project’s local styling system
-- `__tests__` coverage for opener, transport controls, and story flow
-
-If the project already has a presentation shell, adapt to it. If the project is empty, scaffold the smallest working version that can run.
-
-## Workspace boundary
-
-Treat the bundled skill package as read-only reference material.
-
-When the user asks to implement a presentation, write into the current app workspace, not into `examples/`, `reference/`, or `.agents/skills/`.
-
-Only edit the skill package itself when the user explicitly asks to rewrite the skill.
-
-## Non-negotiable contract
-
-Preserve the PresentationFeature system. Change the storyline and content only.
-
-That means:
-
-- same fullscreen player idea
-- same centered cinematic artboard
-- same desktop-first stage with mobile fallback
-- same bottom transport bar
-- same autoplay-first presentation behavior
-- same scene-to-scene blur/opacity choreography
-- same subtle scale drift and controlled motion rhythm
-- same polished simulation-card storytelling
-- same premium CTA close
-
-## Scene grammar
-
-Use the same narrative arc as the reference:
-
-1. hook intro
-2. concept reframing
-3. philosophy / criteria / worldview
-4. vision or positioning
-5. feature chapters, sized to the source content
-6. audience / proof / comparison slides when supported
-7. final CTA
-
-Default rule: **do not force a fixed slide count**. Choose the smallest deck that fully expresses the source content while still feeling structurally close to PresentationFeature.
-
-When the source contains multiple strong claims, split them into more scenes so each beat can breathe.
-
-Favor UI simulations, state changes, and product surfaces over dense text blocks.
-
-## Layout language
-
-Preserve these layout behaviors:
-
-- hero-centered headline scenes
-- split copy-left / product-right scenes
-- premium white cards with soft borders and soft shadows
-- stacked persona or role cards when the content calls for it
-- stat-card grids for proof or comparison scenes
-- final centered CTA lockup
-
-The overall rhythm should feel like a premium ad: short, focused beats with a clear visual job in each scene.
-
-Do not replace this with:
-
-- long scrolling landing pages
-- dashboards
-- generic bento grids
-- raw screenshots dropped without integration
-- long paragraph sections
-
-## Motion language
-
-Keep motion calm, premium, and deliberate:
-
-- scene swaps via `AnimatePresence`
-- blur + opacity transitions
-- subtle scale drift inside each scene
-- staggered word reveals for major headlines
-- spring-based entrances for cards and modules
-- gentle hover amplification
-- controlled internal animation inside the simulations
-
-No chaotic choreography. No noisy meme motion. No flashy template-engine energy.
-
-Use motion to reveal product states and transitions, not to animate long paragraphs.
-
-## Transport chrome
-
-Treat the bottom control area like a premium music player.
-
-Keep it compact, low-profile, icon-forward, and easy to scan.
-
-Use a thin progress indicator and restrained labels.
-
-The goal is a minimal surface that feels closer to Spotify or Apple Music than a generic presentation footer.
-
-## Tone and visual mood
-
-The output should feel:
-
-- premium but approachable
-- strategic and high-trust
-- elegant enterprise optimism
-- clean, modern, and product-marketing oriented
-
-It should read like a product promo made by a strong motion/UI team.
-
-## Surface styling
-
-Preserve the same kind of surface language:
-
-- warm off-white base scenes
-- deep green / dark scenes for emphasis
-- premium rounded cards
-- soft shadows and clean borders
-- restrained glow and blur accents
-- crisp typographic hierarchy
-- chapter colors that stay in the emerald / violet / amber / cyan / rose family
-
-## Copy shape
-
-Use:
-
-- short punchy statements
-- strategic verbs
-- high-signal captions
-- compact labels
-- brief proof lines
-
-Avoid:
-
-- fluffy manifesto language
-- generic startup filler
-- long explanatory paragraphs
-- template copy that could belong to any product
-
-## What may change
-
-The following are allowed to change if they map back into the same PresentationFeature scene grammar:
-
-- product name
-- audience
-- category
-- feature/module labels
-- proof points
-- metrics
-- screenshots/mockups
-- CTA text
-- bilingual vs single-language copy
-
-## Feature module rule
-
-Do not just describe features. Show them as polished product simulations.
-
-For each major feature or chapter:
-
-- make it look like a believable product surface
-- use cards, metrics, tags, progress states, or recommendation states when useful
-- keep the screen internally consistent
-- let the content breathe, but keep it compact
-
-## Required output shape
-
-Every result must include:
-
-1. a PresentationFeature-style storyline
-2. a scene-by-scene structure that fits the shared player model
-3. explicit preservation of the house-style contract
-4. a premium CTA ending
-
-## Fidelity check
-
-Before finalizing, verify:
-
-- Does it still feel like a frontend-native video ad, not a webpage?
-- Does it preserve the PresentationFeature player shell idea?
-- Are the scenes arranged in the same narrative family?
-- Are the feature moments shown as polished simulations rather than plain copy?
-- Is the motion calm and deliberate?
-- Does the closing feel like the same premium CTA family?
-
-If any answer is no, revise toward the reference.
+If a result feels like a slide deck instead of a product video ad, revise it toward the shared references.

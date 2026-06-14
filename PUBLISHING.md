@@ -1,10 +1,6 @@
 # Publishing guide
 
-This document explains how to turn this scaffold into a public GitHub skill package.
-
 ## Target shape
-
-Publish the skill as a standalone repo with this structure:
 
 ```text
 presentation-feature-video-ads/
@@ -15,72 +11,44 @@ presentation-feature-video-ads/
 ├── LICENSE
 ├── SKILL.md
 ├── manifest.json
-├── examples/
 ├── docs/
-│   ├── README.md
-│   ├── USAGE.md
-│   ├── FAQ.md
-│   └── PORTABILITY.md
+├── examples/
 ├── reference/
-│   ├── README.md
+│   ├── STYLE_INDEX.md
 │   ├── STYLE_GUIDE.md
-│   ├── scene-grammar.json
-│   └── examples/
-│       ├── about-us-brief.md
-│       └── pricing-brief.md
-└── mcp/
-    └── README.md
+│   └── scene-grammar.json
+├── templates/
+│   ├── index.json
+│   └── */
+│       ├── preview.md
+│       └── design.md
+└── tests/
 ```
 
-## Recommended release model
+## Release model
 
-### Phase 1: public skill repo
+### Phase 1: markdown-first core
 
-Ship the markdown skill and bundled reference pack first.
+Ship the markdown skill, shared references, template metadata, template docs, and starter prompts together.
 
-This makes the package immediately usable by agents that only understand markdown instructions.
+### Phase 2: expand template coverage
 
-Add the top-level examples, docs, changelog, contributing guide, and license at the same time so the repo feels finished on first visit.
+Add more templates by extending `templates/index.json` and adding new `preview.md` / `design.md` pairs.
 
-### Phase 2: optional MCP reference adapter
-
-Add a small read-only MCP server (the runnable `mcp/` package in this scaffold) that exposes the manifest, style guide, scene grammar, and example briefs.
-
-This gives structured clients a better way to pull the house style without depending on repo-local code.
-
-### Phase 3: upstream sync from the canonical source
-
-If your house style evolves, regenerate the bundled reference pack from your canonical design source before you publish the next release.
-
-The public package should stay aligned with its own bundled reference pack, but it should never depend on an external repo at install time.
-
-## Sync strategy
-
-When the source material changes:
-
-1. update the canonical reference source
-2. refresh the distilled `reference/` files and example briefs
-3. bump the public package version
-4. publish a new tag/release
+Keep the current base style as the anchor template.
 
 ## What not to do
 
-- do not edit the public skill file just to support a separate source tree
-- do not hardcode repo-private paths into public instructions
-- do not replace the bundled reference with a vague “inspired by” description
-- do not turn the skill into a generic slide template
-
-## Compatibility notes
-
-- markdown-first clients can use `SKILL.md` alone
-- better clients should consume `reference/` as grounding context
-- MCP-aware clients can use the optional adapter for richer retrieval
+- do not reintroduce MCP
+- do not bulk-load every template `design.md`
+- do not move shared authority into template-local files unless the rule truly varies by template
+- do not turn the skill back into one giant all-in-one contract
 
 ## Release checklist
 
-- [ ] `SKILL.md` is self-contained
-- [ ] `reference/STYLE_GUIDE.md` reads like a durable style contract
-- [ ] `reference/scene-grammar.json` is valid JSON
-- [ ] at least one about-us example exists
-- [ ] at least one pricing example exists
-- [ ] README explains that the skill repo is primary and MCP is optional
+- [ ] `SKILL.md` is a workflow map
+- [ ] `reference/STYLE_INDEX.md` exists
+- [ ] `templates/index.json` is valid JSON
+- [ ] at least one default template has example briefs
+- [ ] MCP files are absent
+- [ ] architecture tests pass
