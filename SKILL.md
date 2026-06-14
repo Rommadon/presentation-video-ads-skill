@@ -1,6 +1,6 @@
 ---
 name: presentation-feature-video-ads
-description: "Generate premium video-ad presentations in the PresentationFeature house style using the bundled reference pack and optional MCP-style reference source."
+description: "Generate premium, multi-scene, UI-first video-ad presentations in the PresentationFeature house style using the bundled reference pack and optional MCP-style reference source."
 ---
 
 # presentation-feature-video-ads
@@ -26,6 +26,12 @@ For React projects, the expected result is the actual presentation implementatio
 - tests that prove the story flow and controls work
 
 If the user explicitly asks for strategy-only or outline-only output, you may give a planning response. Otherwise, assume implementation mode and write the actual source files.
+
+For rich briefs, prefer more, shorter scenes instead of packing several claims into one presentation beat.
+
+Each scene should own one focus, one visible UI state, and one emotional turn.
+
+The transport controls should be minimal and music-player-like, closer to Spotify or Apple Music than a generic presentation toolbar.
 
 ## Reference resolution order
 
@@ -90,6 +96,10 @@ Use the same narrative arc as the reference:
 
 Default rule: **do not force a fixed slide count**. Choose the smallest deck that fully expresses the source content while still feeling structurally close to PresentationFeature.
 
+When the source contains multiple strong claims, split them into more scenes so each beat can breathe.
+
+Favor UI simulations, state changes, and product surfaces over dense text blocks.
+
 ## Layout language
 
 Preserve these layout behaviors:
@@ -100,6 +110,8 @@ Preserve these layout behaviors:
 - stacked persona or role cards when the content calls for it
 - stat-card grids for proof or comparison scenes
 - final centered CTA lockup
+
+The overall rhythm should feel like a premium ad: short, focused beats with a clear visual job in each scene.
 
 Do not replace this with:
 
@@ -122,6 +134,18 @@ Keep motion calm, premium, and deliberate:
 - controlled internal animation inside the simulations
 
 No chaotic choreography. No noisy meme motion. No flashy template-engine energy.
+
+Use motion to reveal product states and transitions, not to animate long paragraphs.
+
+## Transport chrome
+
+Treat the bottom control area like a premium music player.
+
+Keep it compact, low-profile, icon-forward, and easy to scan.
+
+Use a thin progress indicator and restrained labels.
+
+The goal is a minimal surface that feels closer to Spotify or Apple Music than a generic presentation footer.
 
 ## Tone and visual mood
 

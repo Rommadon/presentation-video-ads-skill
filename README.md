@@ -1,6 +1,6 @@
 # presentation-feature-video-ads
 
-One-command skill pack for turning briefs, pages, or empty projects into code-ready presentation video ads.
+One-command skill pack for turning briefs, pages, or empty projects into code-ready, multi-scene, UI-first presentation video ads.
 
 ```bash
 npx skills add Rommadon/presentation-video-ads-skill
@@ -16,11 +16,16 @@ A short prompt like `Use presentation-feature-video-ads to implement the AI 360 
 
 That means the skill should create the actual source files in the current app workspace, add tests, and scaffold the smallest runnable React/Vite structure first if no app exists.
 
+The resulting deck should favor more, shorter scenes with one focus per scene, visible UI simulations, modern product mockups, and a minimal music-player-style transport bar.
+
+Motion should feel crisp, tactile, and refined — closer to `emil-design-eng` than a generic presentation animation style.
+
 ## Why it exists
 
 - Code-first by default
 - Empty-project friendly
 - PresentationFeature-style output
+- More scenes, less text, more UI
 - No extra suffix prompt required
 
 ## What you get

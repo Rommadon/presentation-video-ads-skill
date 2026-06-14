@@ -6,6 +6,12 @@ Use `presentation-feature-video-ads` to create a cinematic presentation video ad
 
 If no app exists yet, scaffold the smallest runnable React/Vite structure first and put the implementation there.
 
+Prefer more, shorter scenes when the content is rich. Give each scene one focus, one visible UI state, and a minimal transport bar.
+
+Use modern product mockups with clean, aesthetic surfaces and motion that feels refined and deliberate.
+
+If a feature deserves proof, let it become a small 2–3 scene demo sequence with a split layout, a mockup card, and a final outcome state.
+
 - product: [describe the product]
 - audience: [who it is for]
 - problem: [what hurts today]

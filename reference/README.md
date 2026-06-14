@@ -4,6 +4,8 @@ This folder is the portable style anchor for the public `presentation-feature-vi
 
 Use it as the canonical style anchor for the public package.
 
+This reference pack now leans harder into multi-scene, UI-first presentations: more, shorter scenes; one focus per scene; modern product mockups; and a minimal music-player-like transport chrome.
+
 ## Files
 
 - `STYLE_GUIDE.md` — distilled house-style contract

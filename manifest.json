@@ -1,6 +1,6 @@
 {
   "name": "presentation-feature-video-ads",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "distribution": "public-hybrid",
   "package_type": "skill-pack",
   "primary_install_unit": "skills",
@@ -37,5 +37,5 @@
     "reference/STYLE_GUIDE.md",
     "reference/scene-grammar.json"
   ],
-  "notes": "Self-contained public skill package with bundled style references, reusable examples, and an optional MCP adapter."
+  "notes": "Self-contained public skill package with bundled style references, reusable examples, and an optional MCP adapter. Defaults to multi-scene, UI-first, modern product mockups, and music-player-minimal transport behavior with Emil-inspired motion sensibility."
 }

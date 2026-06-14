@@ -13,7 +13,7 @@ The output should keep:
 - the same fullscreen player idea
 - the same centered cinematic artboard
 - the same desktop-first stage with mobile fallback
-- the same bottom transport / control bar
+- the same bottom transport / control bar, kept intentionally minimal and music-player-like
 - autoplay-first presentation behavior
 - scene timing based on explicit durations
 - the same polished simulation-card storytelling
@@ -33,6 +33,50 @@ The canonical arc is:
 
 The deck size is not fixed. Use the smallest deck that fully expresses the source content while still feeling structurally close to PresentationFeature.
 
+Prefer more, shorter scenes when the brief has multiple strong claims. One scene should own one idea, one visible UI state, and one emotional beat.
+
+If a scene needs two major claims, split it into two scenes.
+
+Avoid making one scene do the work of a whole page.
+
+The visual balance should be UI-first, not text-first.
+
+## Scene density and UI balance
+
+Each major scene should feel like a focused product moment.
+
+Use:
+
+- one headline
+- one short supporting line
+- one primary product surface or state change
+- optional tiny proof labels or metric chips
+
+Prefer product simulation over explanation. If the scene is mostly copy, it is too dense.
+
+## Feature chapter patterns
+
+The strongest chapters in the source app behave like mini product demos.
+
+Prefer chapter structures that look like:
+
+ - split layout: short copy block on the left, product surface on the right
+ - modern product mockup card for the hero proof moment
+ - 2–3 staged simulation beats for one feature family
+ - counters, timelines, chips, or state transitions inside the mockup
+
+Use a modern, clean, aesthetic product surface. Avoid literal desktop-window imitation unless the product itself calls for it.
+
+If a feature is important, let it take multiple scenes so the UI can evolve in front of the viewer.
+
+Good chapter pacing often looks like:
+
+1. label / setup
+2. state change or loading-to-data reveal
+3. proof / outcome / recommendation
+
+That progression should feel like a product ad, not a lecture.
+
 ## Layout language
 
 Preserve:
@@ -43,6 +87,8 @@ Preserve:
 - stacked persona cards and role-specific framing
 - stat-card grids for proof scenes
 - final centered CTA lockup
+
+The presentation should still feel like a sequence of ad beats, not a set of generic sections.
 
 ## Motion language
 
@@ -56,7 +102,31 @@ Preserve the current motion vocabulary:
 - gentle hover amplification
 - controlled internal animation inside simulations
 
+Use motion to reveal interface states and transitions, not to decorate long text blocks.
+
 The motion should feel calm, premium, and deliberate.
+
+## Motion sensibility
+
+Use the motion sensibility of `emil-design-eng`: crisp, tactile, refined, and performance-aware.
+
+Prefer short, responsive transitions, subtle depth changes, natural easing, and motion that clarifies state rather than decorating text.
+
+Avoid over-animated flourishes, bouncy gimmicks, or motion that feels like a template.
+
+## Transport chrome
+
+Treat the bottom control area like a premium music player rather than a chunky video editor.
+
+Keep it:
+
+- compact
+- low-profile
+- icon-forward
+- subtle in color
+- easy to scan
+
+Think Spotify / Apple Music minimalism: a thin progress indicator, small controls, restrained labels, and very little visual noise.
 
 ## Tone and mood
 
@@ -100,11 +170,15 @@ Prefer:
 - high-signal phrases
 - compact proof lines
 
+Prefer one headline and one short support line per scene. Let the UI carry the rest.
+
 Avoid:
 
 - fluffy manifesto copy
 - generic “revolutionize / unlock / empower” filler
 - long explanatory paragraphs
+- text-only slides with no meaningful UI state
+- chunky transport bars with too much chrome
 
 ## Feature module rule
 
@@ -118,6 +192,11 @@ Good simulation scenes use:
 - progress states
 - recommendation states
 - role-specific states
+- profile panels
+- timelines
+- checklists
+- approval / readiness states
+- before/after diffs
 
 Keep all simulation screens internally consistent with the same visual language.
 

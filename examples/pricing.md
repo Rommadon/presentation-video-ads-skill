@@ -5,3 +5,7 @@ Use `presentation-feature-video-ads` to turn the content from my pricing or pack
 Focus on the pricing logic, the tier comparison, the value of each plan, and a strong CTA.
 
 Keep it content-sized and PresentationFeature-like.
+
+Prefer more, shorter scenes with one focus per scene. Show the tiers and comparisons as UI states or cards, not paragraphs.
+
+Keep the transport chrome minimal and music-player-like.

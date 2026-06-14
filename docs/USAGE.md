@@ -19,6 +19,9 @@ That short prompt already means:
 - create the actual source files in the current app workspace
 - add tests for the presentation flow
 - if no app exists, scaffold the minimal React/Vite structure first
+- prefer more, shorter scenes when the content has multiple claims
+- make each scene own one focus and one visible UI state
+- keep the transport area minimal and music-player-like
 - do not stop at an outline or an example brief
 - do not edit `.agents/skills/` or `examples/` unless the user explicitly asked to rewrite the skill
 

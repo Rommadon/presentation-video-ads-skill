@@ -7,7 +7,12 @@
       "reference/examples/pricing-brief.md"
     ]
   },
-  "slide_count_policy": "smallest_count_that_fully_expresses_content",
+  "slide_count_policy": "prefer_more_shorter_scenes; use the smallest deck only after splitting rich content into one-focus scenes",
+  "scene_focus_policy": "one_primary_idea_per_scene_with_one_visible_ui_state",
+  "scene_density_policy": "split scenes when they contain multiple major claims; avoid text-heavy composite scenes",
+  "visual_priority_policy": "product_simulation_and_state_change_over_explanatory_copy",
+  "chapter_pacing_policy": "use 2-3 scenes for major feature families when the product surface evolves across states",
+  "simulation_pattern_policy": "favor split text/sim layouts, modern product mockups, counters, timelines, chips, and staged state changes",
   "story_arc": [
     {
       "name": "hook_intro",
@@ -51,8 +56,10 @@
     "next",
     "previous",
     "restart",
-    "mute"
+    "mute",
+    "scrub"
   ],
+  "transport_ui_style": "minimal_music_player_strip_with_thin_progress_indicator",
   "surface_traits": [
     "fullscreen player shell",
     "centered cinematic artboard",
@@ -74,16 +81,16 @@
   "fallback_rules": {
     "bundled_reference_authority": "use the bundled style guide, scene grammar, and example briefs as the source of truth",
     "mcp_available": "fetch the same bundled resources through MCP when supported",
-    "content_sparse": "compress to fewer strong claims rather than invent new sections"
+    "content_sparse": "compress to fewer strong claims rather than invent new sections; otherwise split content into more, shorter scenes"
   },
   "examples": {
     "about_us": {
       "input_shape": "about page content",
-      "expected_result": "About Us Presentation in the bundled PresentationFeature house style"
+      "expected_result": "About Us Presentation in the bundled PresentationFeature house style, using split scenes and UI-heavy proof moments"
     },
     "pricing": {
       "input_shape": "pricing / package page content",
-      "expected_result": "content-sized pricing presentation in the bundled house style"
+      "expected_result": "content-sized pricing presentation in the bundled house style, with short scenes and visible comparison UI"
     }
   }
 }
