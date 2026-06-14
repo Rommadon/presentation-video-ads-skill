@@ -28,6 +28,21 @@ Use split copy-left / product-right scenes, modern product mockups, counters, ti
 
 The motion should feel like `emil-design-eng`: crisp, tactile, subtle, and detail-driven.
 
+## Recheck gate
+
+Before delivery, run one final repair pass and confirm:
+
+- no text overlay, clipping, or cramped edge-to-edge stack remains
+- no dominant layout repeats more than twice in a row
+- no animation completes before the scene becomes visible
+- animations are bound to scene activation, not just file load
+- every text layer fades in and fades out instead of popping in
+- every scene still has a visible motion event
+- the deck reads like a premium video ad, not a slide presentation
+- persistent source labels or chrome do not compete with the hero frame
+
+If any check fails, split the scene, reduce copy, or re-compose the layout before handing it off.
+
 ## Layout and motion variety
 
 - alternate centered statement, split copy/product, full-bleed showcase, proof-grid/stat-wall, and CTA scenes

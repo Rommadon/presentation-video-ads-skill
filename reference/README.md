@@ -8,6 +8,7 @@ This folder holds the shared authority used by every template.
 - `PRODUCT_PILLARS.md` — delivery promises and output rules
 - `STYLE_GUIDE.md` — shared house-style contract
 - `scene-grammar.json` — shared scene and pacing rules
+- `RECHECK.md` — final repair loop and anti-overlap gate
 
 ## How to use
 

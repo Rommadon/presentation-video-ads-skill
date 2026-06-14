@@ -26,6 +26,7 @@ test('default template docs exist for on-demand loading', () => {
   assert.equal(exists('templates/presentation-feature-core/design.md'), true);
   assert.equal(exists('templates/presentation-feature-core/examples/about-us-brief.md'), true);
   assert.equal(exists('templates/presentation-feature-core/examples/pricing-brief.md'), true);
+  assert.equal(exists('reference/RECHECK.md'), true);
 });
 
 test('the revised pack advertises the new product pillars', () => {
@@ -34,18 +35,31 @@ test('the revised pack advertises the new product pillars', () => {
   assert.match(readText('reference/STYLE_GUIDE.md'), /centered statement/i);
   assert.match(readText('reference/STYLE_GUIDE.md'), /full-bleed/i);
   assert.match(readText('reference/STYLE_GUIDE.md'), /proof-grid/i);
+  assert.match(readText('reference/STYLE_GUIDE.md'), /single focal composition/i);
+  assert.match(readText('reference/STYLE_GUIDE.md'), /recheck and repair/i);
+  assert.match(readText('reference/STYLE_GUIDE.md'), /scene-activation-bound/i);
+  assert.match(readText('reference/STYLE_GUIDE.md'), /persistent source stamps/i);
   assert.match(readText('reference/PRODUCT_PILLARS.md'), /Text Budget/i);
   assert.match(readText('reference/PRODUCT_PILLARS.md'), /Motion Density/i);
   assert.match(readText('reference/PRODUCT_PILLARS.md'), /20\+/i);
+  assert.match(readText('reference/PRODUCT_PILLARS.md'), /Recheck Loop/i);
+  assert.match(readText('reference/PRODUCT_PILLARS.md'), /duplicate layouts/i);
+  assert.match(readText('reference/PRODUCT_PILLARS.md'), /activation/i);
   assert.match(readText('reference/STYLE_GUIDE.md'), /text-light/i);
   assert.match(readText('reference/STYLE_GUIDE.md'), /visual-only/i);
   assert.match(readText('reference/STYLE_GUIDE.md'), /fade-based/i);
   assert.match(readText('reference/scene-grammar.json'), /scene_archetype_policy/i);
   assert.match(readText('reference/scene-grammar.json'), /layout_variance_policy/i);
+  assert.match(readText('reference/scene-grammar.json'), /single_focus_policy/i);
+  assert.match(readText('reference/scene-grammar.json'), /text_layer_motion_policy/i);
+  assert.match(readText('reference/scene-grammar.json'), /recheck_policy/i);
+  assert.match(readText('reference/scene-grammar.json'), /overlay_safety_policy/i);
   assert.match(readText('reference/scene-grammar.json'), /motion_family_variance_policy/i);
   assert.match(readText('templates/presentation-feature-core/design.md'), /text-light/i);
   assert.match(readText('templates/presentation-feature-core/design.md'), /visual-only/i);
   assert.match(readText('templates/presentation-feature-core/design.md'), /20\+/i);
+  assert.match(readText('templates/presentation-feature-core/design.md'), /Recheck gate/i);
+  assert.match(readText('templates/presentation-feature-core/preview.md'), /recheck-friendly/i);
   assert.match(readText('templates/index.json'), /layout variety/i);
   assert.match(readText('templates/index.json'), /full-bleed reveals/i);
   assert.match(readText('templates/index.json'), /proof-grid moments/i);
@@ -56,4 +70,7 @@ test('the revised pack advertises the new product pillars', () => {
   assert.match(readText('docs/OUTPUT-CONTRACT.md'), /9:16/i);
   assert.match(readText('docs/OUTPUT-CONTRACT.md'), /layout and motion variety/i);
   assert.match(readText('docs/OUTPUT-CONTRACT.md'), /centered statement/i);
+  assert.match(readText('docs/OUTPUT-CONTRACT.md'), /Recheck gate/i);
+  assert.match(readText('docs/OUTPUT-CONTRACT.md'), /activation/i);
+  assert.match(readText('README.md'), /recheck pass/i);
 });

@@ -59,6 +59,17 @@ This file translates the public pack promise into generator behavior.
 - Text, cards, and mockups should enter and exit with fade-based presence transitions.
 - Use a different dominant motion family from scene to scene when possible.
 
+## Recheck Loop
+
+- Run a final repair pass before delivery.
+- Verify scene animations trigger on activation, not just on file load.
+- Reject scenes with overlapping text, clipped controls, or competing content clusters.
+- Reject decks where the same dominant layout repeats more than twice in a row.
+- Reject duplicate layouts that keep reappearing scene after scene.
+- Reject persistent source stamps or control chrome that compete with the hero frame.
+- Require fade-in and fade-out on text layers instead of hard pop-ins.
+- If the deck still reads like a slide presentation, split more scenes and re-run the check.
+
 ## Production Quality
 
 - Accessible semantics, keyboard support, and clear focus behavior.

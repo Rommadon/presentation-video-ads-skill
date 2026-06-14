@@ -33,6 +33,7 @@ Turn product briefs, pages, screenshots, notes, or an empty project into a cinem
 | `templates/*/preview.md` | Generated visual preview cards | After shortlisting |
 | `reference/STYLE_GUIDE.md` | Shared house-style authority | Generation |
 | `reference/scene-grammar.json` | Shared scene/pacing contract | Generation |
+| `reference/RECHECK.md` | Final repair loop and anti-overlap gate | Before delivery |
 | `templates/*/design.md` | Selected template design recipe | After user selection |
 | `templates/presentation-feature-core/examples/*` | Base-template example briefs | When the selected template is the default and the use case matches |
 | `examples/*.md` | User-facing starting prompts | Only when the user needs a starting prompt |
@@ -74,6 +75,20 @@ Read:
 
 Then implement the presentation in the current app workspace as a zero-dependency HTML composition unless the host project already requires a thin wrapper.
 
+### Phase 4 — recheck and repair
+
+Before handing off the result, read `reference/RECHECK.md` and run a final repair pass.
+
+Use that pass to catch the failures that make output feel like a slide deck instead of a video ad:
+
+- repeated dominant layouts
+- text overlays or clipped text
+- too many text clusters in one frame
+- scenes without a visible motion event or animation bound to scene activation
+- any frame that still feels cramped, static, or templated
+
+If a scene fails the check, split it, trim it, or re-compose it before delivery. Do not ship a result that still looks slide-like.
+
 ## Implementation contract
 
 The expected result usually includes:
@@ -94,6 +109,9 @@ Only edit the skill package itself when the user explicitly asks to improve or r
 - one focus and one visible UI state per scene
 - many scenes should be text-light or near-textless
 - every scene should have some motion, even if it is subtle
+- every text layer should fade in and fade out instead of popping in
+- no overlapping text blocks, clipped controls, or stacked paragraph clusters
+- no dominant layout should repeat too many times in a row
 - modern product mockups, not literal desktop chrome
 - crisp, tactile, refined motion
 - minimal music-player-like transport chrome

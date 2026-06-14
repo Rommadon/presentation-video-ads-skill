@@ -14,11 +14,25 @@ Keep the scenes text-light: use one headline or short label, add at most one sho
 
 For normal-length briefs, aim for 20+ micro-scenes and let text fade in and out rather than sit statically on screen.
 
+If a scene has overlapping text, clipped controls, or more than one competing focal cluster, split it before polishing it.
+
 ## Use this template when
 
 - the user wants the current best version of the skill
 - the brief is product-led, feature-led, or category-reframing
 - you need the cleanest translation of the house style into code
+
+## Recheck gate
+
+Before you consider the template finished, run a repair pass and confirm:
+
+- no dominant layout repeats more than twice in a row
+- no animation completes before the scene becomes visible
+- every text layer fades in and fades out instead of popping in
+- no text overlay, clipping, or crowded stack remains
+- every scene still feels like a single focal composition with one visible UI state
+- persistent source labels or transport chrome stay visually subordinate
+- if the result still feels slide-like, split the scene and increase the motion
 
 ## Core surfaces
 

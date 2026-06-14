@@ -45,6 +45,8 @@ Avoid making one scene do the work of a whole page.
 
 Use a deliberate mix of centered statement scenes, split copy/product scenes, full-bleed product showcases, proof-grid/stat-wall moments, transition scenes, and CTA lockups. Do not let split layouts dominate the whole deck.
 
+Each scene should still read as a single focal composition. If two text blocks, two cards, or two competing surfaces fight for attention, split the scene.
+
 The visual balance should be UI-first, not text-first.
 
 ## Scene density and UI balance
@@ -105,6 +107,8 @@ Preserve:
 
 Avoid duplicate nav rails, oversized footer toolbars, and any frame that feels like a slide deck because too many panels are competing at once.
 
+Avoid persistent source stamps, debug labels, or chrome elements that sit on top of every scene and compete with the hero frame.
+
 The presentation should still feel like a sequence of ad beats, not a set of generic sections.
 
 ## Motion language
@@ -125,7 +129,11 @@ The motion should feel calm, premium, and deliberate.
 
 Every scene should contain at least one motion event, even if it is only a subtle state change or counter pulse.
 
+Motion must be scene-activation-bound. If an animation finishes before the scene becomes visible, it is the wrong implementation.
+
 Text, cards, and mockups should enter and exit with fade-based presence transitions. Stagger text lines so they feel choreographed rather than dumped onto the frame.
+
+Every text layer should also fade in and fade out cleanly. Do not pop text in over another text block or let it sit on top of a crowded surface.
 
 When possible, rotate dominant motion families across scenes: word reveals, counter ticks, loading-to-data reveals, state swaps, card entrances, and camera drift.
 
@@ -227,6 +235,16 @@ Good simulation scenes use:
 - before/after diffs
 
 Keep all simulation screens internally consistent with the same visual language.
+
+## Recheck and repair
+
+Before delivery, verify:
+
+- no repeated dominant layout appears more than twice in a row
+- no text overlay, clipping, or cramped edge-to-edge stack remains
+- every text layer fades in and out rather than popping in
+- every scene has a single focal composition and one visible UI state
+- if the deck still feels slide-like, split the scene and re-run the check
 
 ## What may change
 

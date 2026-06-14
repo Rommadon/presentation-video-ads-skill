@@ -10,4 +10,7 @@ Use this when you want the strongest default version of the skill.
 - motion-heavy with small, visible state changes in every scene
 - for normal content, expect 20+ micro-scenes instead of a few dense slides
 - fade-in / fade-out motion on text and mockups keeps the scene feeling like an ad
+- animations should start when the scene becomes active, not while hidden
+- recheck-friendly: single focal compositions, no repeated dominant layouts, no text overlays, no clipped controls
+- transport and source labels stay visually subordinate
 - the safest default when the brief needs balanced, polished ad energy

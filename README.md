@@ -29,6 +29,10 @@ That means the skill should create real source files in the current app workspac
 
 If a scene needs more than two short lines of copy, split it into another scene. Some scenes can be visual-only.
 
+Before delivery, the skill should run a recheck pass to catch duplicate layouts, text overlap, clipped controls, and any frame that still reads like a slide deck instead of a video ad.
+
+Animations should be bound to the active scene, not just to page load, so word reveals and fades still read when each scene becomes visible.
+
 If the user has not expressed a visual preference, choose from the generated preview cards first so the result feels intentionally styled instead of generically templated.
 
 ## Starter templates
@@ -68,6 +72,7 @@ presentation-feature-video-ads/
 ├── reference/
 │   ├── PRODUCT_PILLARS.md
 │   ├── STYLE_INDEX.md
+│   ├── RECHECK.md
 │   ├── STYLE_GUIDE.md
 │   └── scene-grammar.json
 └── templates/
@@ -84,4 +89,5 @@ presentation-feature-video-ads/
 - UI-first video-ad storytelling
 - shared base style with multiple on-demand templates
 - progressive disclosure instead of one giant contract
+- a final recheck loop that repairs overlap, duplicate layouts, and slide-like pacing before handoff
 - no private paths, no MCP, no external runtime dependency
