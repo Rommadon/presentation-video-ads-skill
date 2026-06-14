@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "pack_name": "Presentation Feature Templates",
-  "selection_rule": "Read this compact file first. Shortlist up to 3 templates from metadata and visual preview cues. Read only those preview docs. Read exactly one design doc after selection.",
+  "selection_rule": "Read this compact file first. Shortlist up to 3 templates from metadata and visual preview cues, paying attention to layout variety, motion tempo, and scene density. Read only those preview docs. Read exactly one design doc after selection.",
   "template_count": 6,
   "delivery_model": {
     "presentation_file": "single_html",
@@ -19,7 +19,7 @@
       "title": "Presentation Feature Core",
       "status": "ready",
       "is_default": true,
-      "use_when": "You want the strongest default video-ad system with premium product simulations, modern app surfaces, text-light, motion-heavy pacing, and 20+ micro-scenes on normal content.",
+      "use_when": "You want the strongest default video-ad system with premium product simulations, centered and split scenes, full-bleed reveals, proof-grid moments, text-light, motion-heavy pacing, and 20+ micro-scenes on normal content.",
       "avoid_when": "You need a quieter or more print-led editorial aesthetic or a text-heavy keynote feel.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",
@@ -41,7 +41,7 @@
       "title": "Soft Editorial",
       "status": "ready",
       "is_default": false,
-      "use_when": "You want a warm editorial layer on top of the current base style, with calmer surfaces, soft paper contrast, and sparse copy.",
+      "use_when": "You want a warm editorial layer on top of the current base style, with calmer centered statements, soft paper contrast, and sparse copy.",
       "avoid_when": "You need darker, more forceful commercial contrast or dense copy blocks.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",
@@ -60,7 +60,7 @@
       "title": "Emerald Editorial",
       "status": "ready",
       "is_default": false,
-      "use_when": "You want magazine-cover enterprise confidence with richer masthead rhythm, premium contrast, and concise copy.",
+      "use_when": "You want magazine-cover enterprise confidence with richer masthead rhythm, premium contrast, concise copy, and strong proof-grid or stat-wall scenes.",
       "avoid_when": "You need casual, playful, or low-formality motion, or a text-heavy layout.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",
@@ -79,7 +79,7 @@
       "title": "Vellum",
       "status": "ready",
       "is_default": false,
-      "use_when": "You want a dark, quiet, scholarly editorial variant with very sparse, near-textless beats.",
+      "use_when": "You want a dark, quiet, scholarly editorial variant with very sparse, near-textless beats, full-bleed atmospherics, and slow-breathing motion.",
       "avoid_when": "You need brighter pop color, louder CTA energy, or lots of on-screen copy.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",
@@ -98,7 +98,7 @@
       "title": "Capsule",
       "status": "ready",
       "is_default": false,
-      "use_when": "You want modular rounded cards, friendlier commercial energy, short labels, and clean multi-card UI states.",
+      "use_when": "You want modular rounded cards, friendlier commercial energy, short labels, clean multi-card UI states, and structured proof-grid comparisons.",
       "avoid_when": "You need austere or highly institutional formality or a paragraph-led layout.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",
@@ -117,7 +117,7 @@
       "title": "Cobalt Grid",
       "status": "ready",
       "is_default": false,
-      "use_when": "You want sharp design-research typography, high structure, and analytical beats with label-light motion.",
+      "use_when": "You want sharp design-research typography, high structure, centered analytic beats, and label-light motion.",
       "avoid_when": "You need soft warmth, playful expressiveness, or a text-heavy narrative.",
       "style_authority": [
         "reference/STYLE_GUIDE.md",

@@ -28,6 +28,13 @@ Use split copy-left / product-right scenes, modern product mockups, counters, ti
 
 The motion should feel like `emil-design-eng`: crisp, tactile, subtle, and detail-driven.
 
+## Layout and motion variety
+
+- alternate centered statement, split copy/product, full-bleed showcase, proof-grid/stat-wall, and CTA scenes
+- do not repeat the same dominant layout more than twice in a row
+- vary the dominant motion family from scene to scene
+- treat fades, reveals, counters, state changes, and camera drift as different beats rather than a single repeated effect
+
 ## Integration rule
 
 When the host project already exists, keep the integration glue thin. Do not add a framework or build step just to satisfy the presentation. The ad logic itself should remain self-contained.

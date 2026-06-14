@@ -20,6 +20,23 @@ This file translates the public pack promise into generator behavior.
 - No generic purple gradients on white, copy-paste hero layouts, or template-y card stacks.
 - Each template should have a clear visual voice, motion tempo, and surface language.
 
+## Scene Archetypes
+
+- title-only or one-word hook scenes
+- centered statement scenes
+- full-bleed product or UI showcase scenes
+- split copy/product scenes when the story earns it
+- proof grids, stat walls, and metric cards
+- transition / atmospheric scenes
+- CTA / outro scenes
+
+## Layout Variance
+
+- Alternate scene archetypes instead of repeating the same split layout.
+- Do not repeat the same dominant layout more than twice in a row.
+- Use centered, split, full-bleed, stacked, and grid-based frames across a deck.
+- Layout should feel intentionally choreographed, not templated.
+
 ## Scene Count
 
 - For normal-length content, default to 20+ short scenes.
@@ -40,6 +57,7 @@ This file translates the public pack promise into generator behavior.
 - Motion can be text reveals, card entrances, counter ticks, state swaps, camera drift, or a small UI interaction.
 - Static frames should be rare; ad scenes should feel alive even when the copy is minimal.
 - Text, cards, and mockups should enter and exit with fade-based presence transitions.
+- Use a different dominant motion family from scene to scene when possible.
 
 ## Production Quality
 

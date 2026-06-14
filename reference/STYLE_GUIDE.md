@@ -43,6 +43,8 @@ If a scene needs two major claims, split it into two scenes.
 
 Avoid making one scene do the work of a whole page.
 
+Use a deliberate mix of centered statement scenes, split copy/product scenes, full-bleed product showcases, proof-grid/stat-wall moments, transition scenes, and CTA lockups. Do not let split layouts dominate the whole deck.
+
 The visual balance should be UI-first, not text-first.
 
 ## Scene density and UI balance
@@ -66,10 +68,13 @@ The strongest chapters in the source app behave like mini product demos.
 
 Prefer chapter structures that look like:
 
- - split layout: short copy block on the left, product surface on the right
- - modern product mockup card for the hero proof moment
- - 2–3 staged simulation beats for one feature family
- - counters, timelines, chips, or state transitions inside the mockup
+- split layout: short copy block on the left, product surface on the right
+- centered statement scenes for hooks, worldview beats, and premium emphasis
+- full-bleed showcases for product moments that need visual immersion
+- proof-grid and stat-wall scenes for evidence-heavy beats
+- modern product mockup card for the hero proof moment
+- 2–3 staged simulation beats for one feature family
+- counters, timelines, chips, or state transitions inside the mockup
 
 Use a modern, clean, aesthetic product surface. Avoid literal desktop-window imitation unless the product itself calls for it.
 
@@ -121,6 +126,8 @@ The motion should feel calm, premium, and deliberate.
 Every scene should contain at least one motion event, even if it is only a subtle state change or counter pulse.
 
 Text, cards, and mockups should enter and exit with fade-based presence transitions. Stagger text lines so they feel choreographed rather than dumped onto the frame.
+
+When possible, rotate dominant motion families across scenes: word reveals, counter ticks, loading-to-data reveals, state swaps, card entrances, and camera drift.
 
 Favor camera-like scene cuts and staged reveals over page-section transitions.
 
