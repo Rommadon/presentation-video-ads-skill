@@ -2,7 +2,7 @@
 
 This is the default template and the anchor for the rest of the pack.
 
-The presentation should be delivered as a zero-dependency HTML composition with inline CSS and JavaScript, and it should support both 16:9 and 9:16 output targets without layout collisions.
+The presentation should be delivered as a zero-dependency HTML composition. Use inline CSS and JavaScript for the simplest case, or load the local shared player library (`lib/player.js` + `lib/player.css`) via `<script>` tags so the transport, stage scaling, and scene transitions stay consistent with the PresentationFeature house style. Support both 16:9 and 9:16 output targets without layout collisions.
 
 For normal-length briefs, expect 20+ micro-scenes. Mix title-only, text+mockup, UI-only, and transition scenes instead of compressing the story into a few dense frames.
 
@@ -33,6 +33,15 @@ Before you consider the template finished, run a repair pass and confirm:
 - every scene still feels like a single focal composition with one visible UI state
 - persistent source labels or transport chrome stay visually subordinate
 - if the result still feels slide-like, split the scene and increase the motion
+
+## Shared player library
+
+This template pairs with `lib/player.js` when you want the exact PresentationFeature transport:
+
+- Load `player.css` before `player.js`.
+- Build scenes as `{ id, durationMs, render(el), activate(el) }`.
+- Keep all scene motion inside `activate(el)` so it runs on `scene:activate`, not on page load.
+- The player handles play/pause, next/previous, restart, mute, and scene transitions; do not add a scrubber or time display.
 
 ## Core surfaces
 

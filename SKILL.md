@@ -73,7 +73,7 @@ Read:
 - the selected template's `design.md`
 - the selected template's example briefs only if they help the current use case
 
-Then implement the presentation in the current app workspace as a zero-dependency HTML composition unless the host project already requires a thin wrapper.
+Then implement the presentation in the current app workspace as a zero-dependency HTML composition. Use the bundled shared player library (`lib/player.js` + `lib/player.css`) as the default transport/stage/transition engine so every deck gets the same PresentationFeature player UX. Only fall back to fully inline CSS/JS when the user explicitly asks for a single-file deliverable or the host project cannot accept extra files.
 
 ### Phase 4 — recheck and repair
 
@@ -93,7 +93,9 @@ If a scene fails the check, split it, trim it, or re-compose it before delivery.
 
 The expected result usually includes:
 
-- a single self-contained HTML presentation file with inline CSS and JS
+- a self-contained HTML presentation file
+- the shared player library (`player.js` + `player.css`) loaded via local `<script>` / `<link>` tags
+- scene markup and styles, either inline or in a small companion CSS file
 - a tiny route/page wrapper only if the host project already needs one
 - minimal styling glue for the presentation shell, if any
 - any small supporting components or data modules needed by the host

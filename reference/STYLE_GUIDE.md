@@ -4,7 +4,7 @@ This is the portable style reference for the public `presentation-feature-video-
 
 It is a self-contained house-style contract for the public pack. The style name `PresentationFeature` refers to the visual language family, not a required source path.
 
-The presentation output itself should stay zero-dependency: a single HTML composition with inline CSS and JavaScript unless the host project explicitly needs thin integration glue.
+The presentation output itself should stay zero-dependency. The default deliverable is a single HTML composition with inline CSS and JavaScript. When the shared PresentationFeature player library is used, the same HTML may load a local `player.js` + `player.css` via `<script>` tags; this still counts as zero-dependency because no npm packages, frameworks, or external CDN calls are required.
 
 ## Immutable contract
 
@@ -159,7 +159,19 @@ Keep it:
 - subtle in color
 - easy to scan
 
-Think Spotify / Apple Music minimalism: a thin progress indicator, small controls, restrained labels, and very little visual noise.
+Think Spotify / Apple Music minimalism: small controls, restrained labels, and very little visual noise. The shared player does not expose a scrubber, timeline, or time display.
+
+## Shared player library
+
+When generating a deck with the bundled `lib/player.js`:
+
+- Load `player.css` before `player.js` in the HTML `<head>`.
+- Create scenes as `{ id, durationMs, render(el), activate(el) }` objects, where `render` populates the scene DOM and `activate` triggers scene-bound motion.
+- Instantiate `new PresentationPlayer(container, scenes, options)`. Autoplay starts by default.
+- The library provides Exit, Previous, Play/Pause, Next, Restart, and Mute controls in a glass-pill transport bar.
+- The library handles scene swaps with blur + opacity fades, subtle scale drift, and `scene:activate` / `scene:deactivate` events.
+- Keep scene motion inside `activate()` so it runs when the scene becomes visible, not on file load.
+- Do not add a scrubber, timeline, time display, or fullscreen toggle; the player intentionally mirrors the PresentationFeature transport.
 
 ## Tone and mood
 

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared Player Example — presentation-feature-video-ads</title>
+  <link rel="stylesheet" href="../lib/player.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #fafaf8; }
+    #player { width: 100vw; height: 100vh; }
+
+    .scene {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #043a25;
+    }
+
+    .scene h1 {
+      font-size: 96px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .scene h2 {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .scene p {
+      margin-top: 1.25rem;
+      font-size: 24px;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease 0.1s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    }
+
+    .scene.active h1,
+    .scene.active h2,
+    .scene.active p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(4, 58, 37, 0.08);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .dark-scene {
+      background: #043a25;
+      color: #fafaf8;
+    }
+    .dark-scene .chip { background: rgba(250, 250, 248, 0.12); }
+
+    .card {
+      width: 420px;
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      box-shadow: 0 24px 80px rgba(2, 44, 34, 0.12);
+      text-align: left;
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+      transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .scene.active .card { opacity: 1; transform: translateY(0) scale(1); }
+
+    .metric {
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+
+  <script src="../lib/player.js"></script>
+  <script>
+    const makeScene = (id, className, html, duration) => ({
+      id,
+      duration,
+      html: `<div class="scene ${className}">${html}</div>`,
+      activate: (node) => {
+        node.querySelector('.scene').classList.add('active');
+      }
+    });
+
+    new PresentationPlayer(document.getElementById('player'), {
+      scenes: [
+        makeScene('hook', '', `
+          <div class="chip">Shared Player Demo</div>
+          <h1>One library.<br>Many stories.</h1>
+          <p>The PresentationFeature transport, now reusable.</p>
+        `, 5000),
+        makeScene('feature', 'dark-scene', `
+          <div class="chip">How it works</div>
+          <h2>Scene-bound motion</h2>
+          <p>Animations trigger on <code>scene:activate</code>, not on load.</p>
+        `, 5000),
+        makeScene('proof', '', `
+          <div class="card">
+            <div class="chip">Proof point</div>
+            <div class="metric">20+</div>
+            <p>micro-scenes per deck, zero dependencies.</p>
+          </div>
+        `, 5000)
+      ],
+      onExit: () => {
+        if (window.confirm('Exit the presentation?')) {
+          window.location.reload();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

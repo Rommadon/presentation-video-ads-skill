@@ -9,8 +9,14 @@
     ]
   },
   "delivery_model": {
-    "presentation_file": "single_html",
-    "css_js_mode": "inline",
+    "presentation_file": "single_html_or_local_lib",
+    "css_js_mode": "inline_or_bundled_lib",
+    "shared_player_library": {
+      "js": "lib/player.js",
+      "css": "lib/player.css",
+      "class": "PresentationPlayer",
+      "load_model": "local_script_tag"
+    },
     "dependency_policy": "zero_dependencies",
     "framework_policy": "no_frameworks_by_default"
   },
@@ -75,15 +81,15 @@
     "rose"
   ],
   "player_controls": [
+    "exit",
+    "previous",
     "play",
     "pause",
     "next",
-    "previous",
     "restart",
-    "mute",
-    "scrub"
+    "mute"
   ],
-  "transport_ui_style": "minimal_music_player_strip_with_thin_progress_indicator",
+  "transport_ui_style": "minimal_music_player_pill_no_scrub_no_time",
   "surface_traits": [
     "fullscreen player shell",
     "centered cinematic artboard",

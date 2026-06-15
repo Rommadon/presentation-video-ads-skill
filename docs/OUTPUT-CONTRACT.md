@@ -4,12 +4,23 @@ This skill is intended to produce implementation-ready code in the current app w
 
 ## Default deliverable
 
-- a single HTML file with inline CSS and JS
-- no npm packages, build tools, or framework runtime for the presentation itself
-- accessible markup, keyboard controls, and clear focus states
+- a single HTML file with inline CSS and JS, OR an HTML file plus the local shared player library (`player.js` + `player.css`)
+- no npm packages, build tools, CDN calls, or framework runtime for the presentation itself
+- accessible markup, aria-labelled controls, and clear focus states
 - fixed 16:9 artboard logic with a 9:16 mobile-safe version
 - well-commented code that is easy to customize
 - fade-based presence transitions and staggered text reveals for every scene
+
+## Shared player library deliverable
+
+When using the bundled `lib/player.js`:
+
+- Include `player.css` in the `<head>` and `player.js` before the closing `</body>` (or load it as a module).
+- Provide scenes as `{ id, durationMs, render(el), activate(el) }` objects.
+- `render(el)` must create the scene DOM; `activate(el)` must start scene-bound motion so animations run when the scene becomes active, not on file load.
+- The player exposes a minimal glass-pill transport with Exit, Previous, Play/Pause, Next, Restart, and Mute.
+- The player intentionally does not include a scrubber, timeline, time display, or fullscreen toggle.
+- Scene transitions use blur + opacity fades and subtle scale drift; internal motion is triggered by `activate()` and the `scene:activate` event.
 
 ## Scene copy budget
 
